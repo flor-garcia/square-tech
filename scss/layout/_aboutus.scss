@@ -1,0 +1,51 @@
+@import "utilities/mixins";
+@import "utilities/variables";
+
+/* Start About Us */
+
+#aboutus {
+    @extend %parallax;
+    .title-container {
+        @extend %flexbox;
+        .title {
+            @include titles;
+            @extend %flexbox;
+        }
+    }
+    .title-text {
+        @include subtitle-text;
+        @extend %flexbox;
+        text-align: justify;
+        
+    }
+
+    .member{
+        position: relative;
+        text-align: center;
+
+       
+        
+        .member-info{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            @include text;
+            @extend %flexbox;
+            transition: 0.2s;
+            visibility: hidden;
+           
+
+            &:hover{
+                background: rgba(0, 0, 0, 0.7);
+                visibility:initial;
+            }
+
+        
+        }
+    }
+
+   
+
+}

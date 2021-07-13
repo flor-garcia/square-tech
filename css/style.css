@@ -1,0 +1,554 @@
+/* Import Layout */
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 16px; }
+
+/* Start NavBar */
+.navbar {
+  background-color: #0F1026;
+  border-bottom: 2px solid #9799A6;
+  box-sizing: border-box; }
+  .navbar .container-fluid .navbar-brand .brand {
+    font-family: "GilroyLight";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-overflow: clip;
+    align-items: center; }
+    .navbar .container-fluid .navbar-brand .brand:hover {
+      cursor: pointer;
+      color: white; }
+  .navbar .container-fluid .navbar-toggler {
+    background-color: #0F1026; }
+    .navbar .container-fluid .navbar-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28242, 46, 46%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+  .navbar .container-fluid .navbar-collapse {
+    justify-content: flex-end; }
+    .navbar .container-fluid .navbar-collapse .navbar-nav {
+      display: flex;
+      align-items: center; }
+      .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
+        font-family: "GilroyLight";
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+        text-justify: distribute;
+        width: fit-content; }
+        .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link:hover {
+          color: #f22e2e; }
+  @media (max-width: 768px) {
+    .navbar .nav-link {
+      font-size: 2.2rem; } }
+
+/* End NavBar */
+.banner-section {
+  position: relative;
+  width: fit-content; }
+  .banner-section .banner-text {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1; }
+    .banner-section .banner-text .typewriter .typing-text {
+      font-family: "GilroyExtraBold";
+      font-size: 4rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      text-justify: distribute;
+      overflow: hidden;
+      flex-wrap: wrap;
+      border-right: 0.15rem solid #f22e2e;
+      margin: 0 auto;
+      padding-right: 2rem;
+      letter-spacing: 0.1rem; }
+      @media (max-width: 830px) {
+        .banner-section .banner-text .typewriter .typing-text {
+          display: flex;
+          text-align: center;
+          align-items: center;
+          font-size: 1.2rem;
+          margin: 0 auto;
+          padding-left: 2rem; } }
+    .banner-section .banner-text .typewriter:nth-child(1) {
+      animation: typing 3.5s steps(50, end), blink-caret 0.75s step-end infinite alternate;
+      animation-fill-mode: forwards; }
+    .banner-section .banner-text .typewriter:nth-child(2) {
+      animation: typing-2 3.5s steps(30, end), blink-caret 0.75s step-end infinite alternate;
+      animation-fill-mode: forwards;
+      opacity: 0; }
+    .banner-section .banner-text .typewriter .selection {
+      color: #f22e2e; }
+
+@keyframes typing {
+  0% {
+    width: 0; }
+  99.9% {
+    border-right: 0.15rem solid #f22e2e; }
+  100% {
+    border: none; } }
+
+@keyframes typing-2 {
+  0% {
+    width: 0; }
+  1% {
+    opacity: 1; }
+  99.9% {
+    border-right: 0.15rem solid #f22e2e; }
+  100% {
+    border: none;
+    opacity: 1; } }
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; }
+  50% {
+    border-color: #f22e2e; } }
+
+/* Start Banner */
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #contact .title-container, #contact .title-text, #contact .mail, #contact .button-container, #aboutus .title-container, #aboutus .title-container .title, #aboutus .title-text, #aboutus .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#services .card-container .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #2D2E40;
+  background-clip: border-box;
+  border: 1px solid 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  border-radius: .50rem; }
+
+footer, #aboutus {
+  background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
+  background-attachment: fixed;
+  background-size: cover; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+/* Start Footer */
+footer .sticky-button {
+  display: block;
+  position: fixed;
+  bottom: 7.5rem;
+  right: 3.75rem; }
+  footer .sticky-button .sticky-icon {
+    width: 3.75rem;
+    height: 3.75rem; }
+
+footer .copyright {
+  font-family: "GilroyLight";
+  font-size: nth li(0.5rem, 1rem, 1.2rem, 1.5rem, 1.8rem, 2rem, 2.2rem, 2.5rem, 3rem, 3.5rem, 4rem, 2);
+  color: white;
+  padding: 20px 10px;
+  border-top: 1px solid #686677; }
+  @media (max-width: 768px) {
+    footer .copyright {
+      display: flex;
+      text-align: center;
+      align-items: center; } }
+
+/* End Footer */
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #contact .title-container, #contact .title-text, #contact .mail, #contact .button-container, #aboutus .title-container, #aboutus .title-container .title, #aboutus .title-text, #aboutus .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#services .card-container .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #2D2E40;
+  background-clip: border-box;
+  border: 1px solid 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  border-radius: .50rem; }
+
+footer, #aboutus {
+  background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
+  background-attachment: fixed;
+  background-size: cover; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+/* Start Services */
+#services {
+  background-color: #0F1026;
+  box-sizing: border-box; }
+  #services .title {
+    font-family: "GilroyExtraBold";
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    padding: 1.25rem 0.62rem;
+    width: fit-content;
+    text-align: center;
+    border-bottom: 5px solid #f22e2e; }
+  #services .card-container {
+    display: flex;
+    align-items: flex-end;
+    animation: float 6s ease infinite; }
+    @media (max-width: 700px) {
+      #services .card-container {
+        margin: 15px; } }
+    #services .card-container .card {
+      border-radius: 10px;
+      animation: float 6s ease infinite;
+      width: 100%;
+      height: 100%; }
+      @media (max-width: 700px) {
+        #services .card-container .card {
+          margin: 15px; } }
+      #services .card-container .card .card-title {
+        font-family: "GilroyExtraBold";
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center; }
+        @media (max-width: 700px) {
+          #services .card-container .card .card-title {
+            font-size: 1.5rem; } }
+        #services .card-container .card .card-title:hover {
+          border-bottom: 2px solid #f22e2e; }
+      #services .card-container .card .card-text {
+        font-family: "GilroyLight";
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+        text-justify: distribute;
+        padding: 10px;
+        text-align: left; }
+        @media (max-width: 700px) {
+          #services .card-container .card .card-text {
+            font-size: 1rem; } }
+
+@keyframes float {
+  0% {
+    transform: translate3d(0rem); }
+  50% {
+    transform: translate3d(-1rem); }
+  100% {
+    transform: translate3d(0px); } }
+
+/* End Services */
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+/* Start Form */
+#contact {
+  background-color: #0F1026; }
+  #contact .title-container {
+    padding: 3rem; }
+  #contact .title {
+    font-family: "GilroyExtraBold";
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    padding: 1.25rem 0.62rem;
+    width: fit-content;
+    text-align: center;
+    border-bottom: 5px solid #f22e2e; }
+  #contact .title-text {
+    font-family: "GilroyExtraBold";
+    font-weight: lighter;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    text-justify: distribute;
+    text-align: center; }
+  #contact .mail {
+    font-family: "GilroyExtraBold";
+    font-size: 1.2rem;
+    color: lighter(white, 40%);
+    text-decoration: none;
+    text-justify: distribute;
+    color: #f22e2e;
+    font-weight: 500; }
+    #contact .mail :hover {
+      cursor: pointer; }
+  #contact .form-container {
+    background-color: #2D2E40;
+    padding: 30px 20px;
+    border-radius: 10px; }
+  #contact .form-label {
+    font-family: "GilroyLight";
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    text-justify: distribute; }
+  #contact .form-button {
+    font-family: "GilroyLight";
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    text-justify: distribute;
+    border-radius: 5px;
+    background-color: #f22e2e;
+    width: 100px;
+    height: 40px; }
+
+/* End Form */
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+/* Start About Us */
+#aboutus .title-container .title {
+  font-family: "GilroyExtraBold";
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  padding: 1.25rem 0.62rem;
+  width: fit-content;
+  text-align: center;
+  border-bottom: 5px solid #f22e2e; }
+
+#aboutus .title-text {
+  font-family: "GilroyExtraBold";
+  font-weight: lighter;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  text-justify: distribute;
+  text-align: justify; }
+
+#aboutus .member {
+  position: relative;
+  text-align: center; }
+  #aboutus .member .member-info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-family: "GilroyLight";
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    text-justify: distribute;
+    transition: 0.2s;
+    visibility: hidden; }
+    #aboutus .member .member-info:hover {
+      background: rgba(0, 0, 0, 0.7);
+      visibility: initial; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyExtraBold";
+  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-display: swap; }
+
+@font-face {
+  font-family: "GilroyLight";
+  src: url("../fonts/Gilroy-Light.otf") format("opentype");
+  font-display: swap; }
+
+.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #contact .title-container, #contact .title-text, #contact .mail, #contact .button-container, #aboutus .title-container, #aboutus .title-container .title, #aboutus .title-text, #aboutus .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+#services .card-container .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #2D2E40;
+  background-clip: border-box;
+  border: 1px solid 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  border-radius: .50rem; }
+
+footer, #aboutus {
+  background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
+  background-attachment: fixed;
+  background-size: cover; }
+
+#body {
+  background-color: #0F1026 !important; }
+  #body .image-container {
+    background-color: #0F1026; }
+    #body .image-container .error-image {
+      height: 500px;
+      width: 500px;
+      margin: auto; }
+    #body .image-container .error-text {
+      font-family: "GilroyExtraBold";
+      font-size: 3rem;
+      color: white;
+      text-decoration: none;
+      padding: 1.25rem 0.62rem;
+      width: fit-content;
+      text-align: center;
+      border-bottom: 5px solid #f22e2e; }
+    #body .image-container .error-button-container .error-button {
+      font-family: "GilroyLight";
+      font-size: 1rem;
+      color: white;
+      text-decoration: none;
+      text-justify: distribute;
+      background-color: #f22e2e;
+      border-radius: 10px;
+      width: 200px;
+      height: 40px; }

@@ -1,0 +1,120 @@
+@import "utilities/lists";
+@import "utilities/variables";
+
+@mixin text {
+    font-family: $font-light;
+    font-size: $font-size-text;
+    color: $font-color;
+    text-decoration: none;
+    text-justify: distribute;
+}
+
+@mixin brand-text {
+    font-family: $font-light;
+    font-size: nth($fontsize, 4);
+    font-weight: bold;
+    color: $font-color;
+    text-decoration: none;
+    text-overflow:clip;
+}
+
+@mixin banner-text {
+    font-family: $font-bold;
+    font-size: nth($fontsize, 11);
+    font-weight: bold;
+    color: $font-color;
+    text-decoration: none;
+    text-justify: distribute;
+}
+
+
+
+@mixin header-text {
+    font-family: $font-light;
+    font-size: nth($fontsize, 3);
+    color: $font-color;
+    text-decoration: none;
+    text-justify: distribute;
+}
+
+@mixin subtitle-text {
+    font-family: $font-bold;
+    font-weight:lighter;
+    font-size: nth($fontsize, 3);
+    color: $font-color;
+    text-decoration: none;
+    text-justify: distribute;
+}
+
+@mixin mail-text {
+    font-family: $font-bold;
+    font-size: nth($fontsize, 3);
+    color: lighter($font-color, 40%);
+    text-decoration: none;
+    text-justify: distribute;
+}
+
+@mixin titles {
+    font-family: $font-bold;
+    font-size: nth($fontsize, 9);
+    color: $font-color;
+    text-decoration: none;
+    padding: 1.25rem 0.62rem;
+    width: fit-content;
+    text-align: center;
+    border-bottom: 5px solid nth($color, 10);
+}
+
+@mixin cardtitle {
+    font-family: $font-bold;
+    font-size: nth($fontsize, 4);
+    color: $font-color;
+    text-decoration: none;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin responsive-text {
+    @media (max-width: 700px) {
+        font-size: nth($fontsize, 2);
+    }
+}
+
+@mixin responsive-card-title {
+    @media (max-width: 700px) {
+        font-size: nth($fontsize, 4);
+
+    }
+
+}
+
+@mixin responsive-card {
+    @media (max-width: 700px) {
+        margin: 15px;
+        
+    }
+    
+}
+
+@mixin responsive-copyright {
+    @media (max-width: 768px) {
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@mixin responsive-text-banner {
+    @media (max-width: 830px) {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        font-size: nth($fontsize, 3);
+        margin: 0 auto;
+        padding-left: 2rem;
+        
+    }
+    
+}

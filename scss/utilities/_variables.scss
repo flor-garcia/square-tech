@@ -1,0 +1,11 @@
+@import "utilities/lists";
+@import "base/fonts";
+
+$bg-color: nth($color, 6);
+$card-bg-color: nth($color, 7);
+$details-color: nth($color, 10);
+$font-color: nth($color, 3);
+$font-light: "GilroyLight";
+$font-bold: "GilroyExtraBold";
+$font-size-text: nth($fontsize, 2);
+$font-size-title: nth($fontsize, 4);

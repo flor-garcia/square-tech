@@ -1,0 +1,63 @@
+@import "utilities/mixins";
+@import "utilities/variables";
+
+/* Start Form */
+#contact{
+    background-color: $bg-color;
+
+    .title-container {
+        padding: 3rem;
+        @extend %flexbox;
+    }
+
+    .title{
+        @include titles;
+        
+    }
+
+    .title-text{
+        @include subtitle-text;
+        @extend %flexbox;
+        text-align: center;
+    }
+
+    .mail{
+        @include mail-text;
+        @extend %flexbox;
+        color: $details-color;
+        font-weight: 500;
+
+        :hover{
+            cursor: pointer;
+        }
+
+    }
+
+    .form-container{
+        background-color: $card-bg-color;
+        padding: 30px 20px;
+        border-radius: 10px;
+    }
+
+    .form-label{
+        @include text;
+    }
+
+    .button-container{
+        @extend %flexbox;
+    }
+
+    .form-button{
+        @include text;
+        border-radius: 5px;
+        background-color: $details-color;
+        width: 100px;
+        height: 40px;
+    }
+
+
+}
+
+
+
+/* End Form */

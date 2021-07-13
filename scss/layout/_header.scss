@@ -1,0 +1,167 @@
+@import "utilities/mixins";
+@import "utilities/variables";
+@import "utilities/lists";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Start NavBar */
+.navbar {
+    background-color: $bg-color;
+    border-bottom: 2px solid nth($color, 8);
+    box-sizing: border-box;
+
+    .container-fluid {
+        .navbar-brand .brand {
+            @include brand-text;
+            align-items: center;
+
+            &:hover {
+                cursor: pointer;
+                color: $font-color;
+            }
+        }
+
+        .navbar-toggler {
+            background-color: nth($color, 6);
+
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28242, 46, 46%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            }
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+
+            .navbar-nav {
+                display: flex;
+                align-items: center;
+
+                .nav-link {
+                    @include header-text;
+                    width: fit-content;
+
+                    &:hover {
+                        color: $details-color;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        .nav-link {
+            font-size: nth($fontsize, 7);
+        }
+    }
+}
+
+/* End NavBar */
+.banner-section {
+    position: relative;
+    width: fit-content;
+
+
+    .banner-text {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        @extend %flexbox;
+        z-index: 1;
+
+
+        .typewriter {
+
+
+            .typing-text {
+                @include banner-text;
+                @include responsive-text-banner;
+                overflow: hidden;
+                flex-wrap: wrap;
+                border-right: .15rem solid $details-color;
+                margin: 0 auto;
+                padding-right: 2rem;
+                letter-spacing: 0.1rem;
+            }
+
+            &:nth-child(1) {
+                animation: typing 3.5s steps(50, end), blink-caret .75s step-end infinite alternate;
+                animation-fill-mode: forwards;
+            }
+
+            &:nth-child(2) {
+                animation: typing-2 3.5s steps(30, end), blink-caret .75s step-end infinite alternate;
+                animation-fill-mode: forwards;
+                opacity: 0;
+            }
+
+            .selection {
+                color: $details-color;
+            }
+
+            @keyframes typing {
+                0% {
+                    width: 0
+                }
+
+                99.9% {
+                    border-right: .15rem solid $details-color;
+                }
+
+                100% {
+                    border: none
+                }
+
+
+            }
+
+            @keyframes typing-2 {
+                0% {
+                    width: 0
+                }
+
+                1%{
+                    opacity: 1;
+                }
+
+                99.9% {
+                    border-right: .15rem solid $details-color;
+                }
+
+                100% {
+                    border: none;
+                    opacity: 1;
+                    
+                }
+
+
+            }
+            
+
+            @keyframes blink-caret {
+
+                from,
+                to {
+                    border-color: transparent
+                }
+
+                50% {
+                    border-color: $details-color
+                }
+
+            }
+
+
+        }
+    }
+}
+
+/* Start Banner */
