@@ -460,9 +460,9 @@ footer, #aboutus {
     text-justify: distribute;
     transition: 0.2s;
     visibility: hidden; }
-    #aboutus .member .member-info:hover {
-      background: rgba(0, 0, 0, 0.7);
-      visibility: initial; }
+  #aboutus .member:hover .member-info {
+    background: rgba(0, 0, 0, 0.7);
+    visibility: initial; }
 
 @font-face {
   font-family: "GilroyExtraBold";

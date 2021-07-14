@@ -5,27 +5,30 @@
 
 #aboutus {
     @extend %parallax;
+
     .title-container {
         @extend %flexbox;
+
         .title {
             @include titles;
             @extend %flexbox;
         }
     }
+
     .title-text {
         @include subtitle-text;
         @extend %flexbox;
         text-align: justify;
-        
+
     }
 
-    .member{
+    .member {
         position: relative;
         text-align: center;
 
-       
         
-        .member-info{
+
+        .member-info {
             position: absolute;
             top: 0;
             bottom: 0;
@@ -35,17 +38,17 @@
             @extend %flexbox;
             transition: 0.2s;
             visibility: hidden;
-           
 
-            &:hover{
-                background: rgba(0, 0, 0, 0.7);
-                visibility:initial;
-            }
 
-        
+
         }
+
+        &:hover .member-info {
+            background: rgba(0, 0, 0, 0.7);
+            visibility: initial;
+        }
+
+
+
     }
-
-   
-
 }
