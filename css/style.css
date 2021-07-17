@@ -162,7 +162,7 @@
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #contact .title-container, #contact .title-text, #contact .mail, #contact .button-container, #aboutus .title-container, #aboutus .title-container .title, #aboutus .title-text, #aboutus .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #services .card-container .card .card-text, #contact .title-container, #contact .title-text, #contact .mail, #contact .button-container, #aboutus .title-container, #aboutus .title-container .title, #aboutus .title-text, #aboutus .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -236,7 +236,7 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #contact .title-container, #contact .title-text, #contact .mail, #contact .button-container, #aboutus .title-container, #aboutus .title-container .title, #aboutus .title-text, #aboutus .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #services .card-container .card .card-text, #contact .title-container, #contact .title-text, #contact .mail, #contact .button-container, #aboutus .title-container, #aboutus .title-container .title, #aboutus .title-text, #aboutus .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -284,17 +284,21 @@ footer, #aboutus {
     display: flex;
     align-items: flex-end;
     animation: float 6s ease infinite; }
-    @media (max-width: 700px) {
+    @media (max-width: 980px) {
       #services .card-container {
-        margin: 15px; } }
+        padding: 1rem; } }
     #services .card-container .card {
       border-radius: 10px;
       animation: float 6s ease infinite;
       width: 100%;
       height: 100%; }
-      @media (max-width: 700px) {
+      @media (max-width: 980px) {
         #services .card-container .card {
-          margin: 15px; } }
+          padding: 1rem; } }
+      #services .card-container .card .card-img {
+        width: max-content;
+        height: max-content;
+        object-fit: cover; }
       #services .card-container .card .card-title {
         font-family: "GilroyExtraBold";
         font-size: 1.5rem;
@@ -304,9 +308,11 @@ footer, #aboutus {
         display: flex;
         justify-content: center;
         text-align: center; }
-        @media (max-width: 700px) {
+        @media (max-width: 980px) {
           #services .card-container .card .card-title {
-            font-size: 1.5rem; } }
+            font-size: 1.5rem;
+            padding: 1rem 0 0 0;
+            text-align: center; } }
         #services .card-container .card .card-title:hover {
           border-bottom: 2px solid #f22e2e; }
       #services .card-container .card .card-text {
@@ -315,11 +321,12 @@ footer, #aboutus {
         color: white;
         text-decoration: none;
         text-justify: distribute;
-        padding: 10px;
-        text-align: left; }
-        @media (max-width: 700px) {
+        padding: 1rem 0 0 0; }
+        @media (max-width: 980px) {
           #services .card-container .card .card-text {
-            font-size: 1rem; } }
+            font-size: 1rem;
+            padding: 1rem 0 0 0;
+            text-align: center; } }
 
 @keyframes float {
   0% {
@@ -402,6 +409,25 @@ footer, #aboutus {
     background-color: #f22e2e;
     width: 100px;
     height: 40px; }
+  #contact .pulse-button {
+    padding: 1.5rem; }
+    #contact .pulse-button .whatsapp-button {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end; }
+      #contact .pulse-button .whatsapp-button .whatsapp-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        animation: pulse 2s infinite; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9); }
+  70% {
+    transform: scale(2); }
+  100% {
+    transform: scale(0.9); } }
 
 /* End Form */
 @font-face {
@@ -504,7 +530,7 @@ footer, #aboutus {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #contact .title-container, #contact .title-text, #contact .mail, #contact .button-container, #aboutus .title-container, #aboutus .title-container .title, #aboutus .title-text, #aboutus .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #services .card-container .card .card-text, #contact .title-container, #contact .title-text, #contact .mail, #contact .button-container, #aboutus .title-container, #aboutus .title-container .title, #aboutus .title-text, #aboutus .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
   display: flex;
   justify-content: center;
   align-items: center; }

@@ -33,6 +33,12 @@
             animation: float 6s ease infinite;
             width: 100%;
             height: 100%;
+
+            .card-img{
+                width: max-content;
+                height: max-content; 
+                object-fit: cover;
+            }
             
 
 
@@ -49,11 +55,13 @@
             .card-text {
                 @include text;
                 @include responsive-text;
-                padding: 10px;
-                text-align: left;
+                @extend %flexbox;
+                padding: 1rem 0 0 0;
+
 
 
             }
+            
         }
     }
 

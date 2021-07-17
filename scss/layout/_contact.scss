@@ -2,7 +2,7 @@
 @import "utilities/variables";
 
 /* Start Form */
-#contact{
+#contact {
     background-color: $bg-color;
 
     .title-container {
@@ -10,49 +10,89 @@
         @extend %flexbox;
     }
 
-    .title{
+    .title {
         @include titles;
-        
+
     }
 
-    .title-text{
+    .title-text {
         @include subtitle-text;
         @extend %flexbox;
         text-align: center;
     }
 
-    .mail{
+    .mail {
         @include mail-text;
         @extend %flexbox;
         color: $details-color;
         font-weight: 500;
 
-        :hover{
+        :hover {
             cursor: pointer;
         }
 
     }
 
-    .form-container{
+    .form-container {
         background-color: $card-bg-color;
         padding: 30px 20px;
         border-radius: 10px;
     }
 
-    .form-label{
+    .form-label {
         @include text;
     }
 
-    .button-container{
+    .button-container {
         @extend %flexbox;
     }
 
-    .form-button{
+    .form-button {
         @include text;
         border-radius: 5px;
         background-color: $details-color;
         width: 100px;
         height: 40px;
+    }
+
+    .pulse-button {
+        padding: 1.5rem;
+
+        .whatsapp-button {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            
+
+
+            .whatsapp-icon {
+                width: 3.5rem;
+                height: 3.5rem;
+                border-radius: 50%;
+                animation: pulse 2s infinite;
+
+            
+
+                @keyframes pulse {
+                    0% {
+                        transform: scale(0.9);
+
+                    }
+
+                    70% {
+                        transform: scale(2);
+
+                    }
+
+                    100% {
+                        transform: scale(0.9);
+                    }
+
+
+                }
+            }
+        }
     }
 
 
