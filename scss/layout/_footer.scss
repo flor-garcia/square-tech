@@ -31,6 +31,7 @@ footer {
         padding: 20px 10px;
         border-top: 1px solid lighten(nth($color, 2), 20%);
         @include responsive-copyright;
+        margin: 0;
 
         .copyright-text {
             @extend %flexbox;

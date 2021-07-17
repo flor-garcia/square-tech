@@ -1,0 +1,83 @@
+@import "utilities/lists";
+@import "utilities/variables";
+@import "utilities/extend";
+
+/* All Sections */
+@mixin responsive-text {
+    @media (max-width: 204px) {
+        font-size: nth($fontsize, 1);
+    }
+}
+
+@mixin responsive-subtitle {
+    @media (max-width: 204px) {
+        font-size: nth($fontsize, 1);
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@mixin responsive-title {
+    @media (max-width: 780px) and (min-width:316px) {
+        font-size: nth($fontsize, 7);
+
+    }
+}
+
+@mixin responsive-title {
+    @media (max-width:316px) {
+        font-size: nth($fontsize, 4);
+    }
+}
+
+
+
+
+/* Header Section */
+@mixin responsive-navbar-collapse {
+    @media (max-width: 204px) {
+        display: flex;
+        justify-content: flex-start !important;
+    }
+}
+/* End Header Section */
+
+
+
+/* Services Section */
+@mixin responsive-card-body {
+    @media (max-width: 204px) {
+        padding: 0.5rem;
+        text-align: center;
+    }
+}
+
+
+@mixin responsive-card-section {
+    @media (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+@mixin responsive-card-container {
+    @media (max-width: 576px) and (min-width:300px) {
+        padding-right: 6rem;
+        padding-left: 6rem;
+        margin: 0;
+    }
+}
+
+@mixin responsive-card-container {
+    @media (max-width: 300px) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0;
+
+    }
+
+}
+/* End Services Section */

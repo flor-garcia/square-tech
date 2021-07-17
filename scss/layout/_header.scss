@@ -1,6 +1,7 @@
 @import "utilities/mixins";
 @import "utilities/variables";
 @import "utilities/lists";
+@import "utilities/breakpoints";
 
 * {
     padding: 0;
@@ -8,16 +9,15 @@
     font-size: 16px;
 }
 
+
 /* Start NavBar */
 .navbar {
     background-color: $bg-color;
     border-bottom: 2px solid nth($color, 8);
-    box-sizing: border-box;
 
     .container-fluid {
         .navbar-brand .brand {
-            @include brand-text;
-            align-items: center;
+            @include texts ($font-size-brand);
 
             &:hover {
                 cursor: pointer;
@@ -26,7 +26,7 @@
         }
 
         .navbar-toggler {
-            background-color: nth($color, 6);
+            background-color: $bg-color;
 
             .navbar-toggler-icon {
                 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28242, 46, 46%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -34,38 +34,30 @@
         }
 
         .navbar-collapse {
-            justify-content: flex-end;
+            @extend %flexbox-end;
+            @include responsive-navbar-collapse;
+            
+            .nav-link {
+                @include texts ($font-size-subtitle);
+                @include responsive-text;
 
-            .navbar-nav {
-                display: flex;
-                align-items: center;
-
-                .nav-link {
-                    @include header-text;
-                    width: fit-content;
-
-                    &:hover {
-                        color: $details-color;
-                    }
+                &:hover {
+                    color: $details-color;
                 }
             }
-
-        }
-
-    }
-
-    @media (max-width: 768px) {
-        .nav-link {
-            font-size: nth($fontsize, 7);
         }
     }
 }
-
 /* End NavBar */
-.banner-section {
-    position: relative;
-    width: fit-content;
 
+
+/* Start Banner */
+.banner-section {
+    @extend %parallax;
+
+    .banner-img{
+    
+}
 
     .banner-text {
         position: absolute;
@@ -128,7 +120,7 @@
                     width: 0
                 }
 
-                1%{
+                1% {
                     opacity: 1;
                 }
 
@@ -139,12 +131,12 @@
                 100% {
                     border: none;
                     opacity: 1;
-                    
+
                 }
 
 
             }
-            
+
 
             @keyframes blink-caret {
 
@@ -164,4 +156,4 @@
     }
 }
 
-/* Start Banner */
+/* End Banner */

@@ -11,6 +11,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+%flexbox-end{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 %service-card{

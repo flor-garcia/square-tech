@@ -1,12 +1,23 @@
 @import "utilities/lists";
 @import "utilities/variables";
 
-@mixin text {
+
+
+@mixin texts ($fontsize) {
     font-family: $font-light;
-    font-size: $font-size-text;
+    font-size: $fontsize;
     color: $font-color;
     text-decoration: none;
-    text-justify: distribute;
+    text-justify: distribute;  
+}
+
+@mixin title ($fontsize) {
+    font-family: $font-bold;
+    font-size: $fontsize;
+    color: $font-color;
+    text-decoration: none;
+    width: fit-content;
+    text-align: center;
 }
 
 @mixin brand-text {
@@ -18,6 +29,15 @@
     text-overflow:clip;
 }
 
+@mixin text {
+    font-family: $font-light;
+    font-size: $font-size-text;
+    color: $font-color;
+    text-decoration: none;
+    text-justify: distribute;
+}
+
+
 @mixin banner-text {
     font-family: $font-bold;
     font-size: nth($fontsize, 11);
@@ -26,8 +46,6 @@
     text-decoration: none;
     text-justify: distribute;
 }
-
-
 
 @mixin header-text {
     font-family: $font-light;
@@ -94,13 +112,7 @@
 
 }
 
-@mixin responsive-card {
-    @media (max-width: 980px) {
-        padding: 1rem;
-        
-    }
-    
-}
+
 
 @mixin responsive-copyright {
     @media (max-width: 768px) {
