@@ -1,58 +1,105 @@
+@import "utilities/extend";
 @import "utilities/mixins";
+@import "utilities/breakpoints";
 @import "utilities/variables";
 
 /* Start Form */
 #contact {
     background-color: $bg-color;
 
+
     .title-container {
-        padding: 3rem;
         @extend %flexbox;
-    }
+        padding: 1rem 0 1rem 0;
+        margin: 0;
 
-    .title {
-        @include titles;
 
-    }
+        .title {
+            @include title ($font-size-title);
+            border-bottom: 3px solid nth($color, 10);
+            @extend %flexbox;
+            @include responsive-title;
+            padding: 0;
 
-    .title-text {
-        @include subtitle-text;
-        @extend %flexbox;
-        text-align: center;
-    }
 
-    .mail {
-        @include mail-text;
-        @extend %flexbox;
-        color: $details-color;
-        font-weight: 500;
-
-        :hover {
-            cursor: pointer;
         }
-
     }
 
-    .form-container {
-        background-color: $card-bg-color;
-        padding: 30px 20px;
-        border-radius: 10px;
-    }
-
-    .form-label {
-        @include text;
-    }
-
-    .button-container {
+    .subtitle-container {
         @extend %flexbox;
+        padding: 0;
+
+        .subtitle-text {
+            @include title ($font-size-subtitle);
+            @include responsive-subtitle;
+            padding: 1rem 0 1rem 0;
+        }
     }
 
-    .form-button {
-        @include text;
-        border-radius: 5px;
-        background-color: $details-color;
-        width: 100px;
-        height: 40px;
+    .mail-container {
+        @extend %flexbox;
+
+        .mail {
+
+            @include title ($font-size-subtitle);
+            @include responsive-subtitle;
+            padding: 1rem 0 1rem 0;
+            color: $details-color;
+            font-weight: 500;
+
+            :hover {
+                cursor: pointer;
+            }
+
+        }
+    }
+
+    .form {
+        padding: 2rem;
+
+
+        .form-container {
+            background-color: $card-bg-color;
+            border-radius: 10px;
+            padding: 2rem;
+            @include responsive-form-container;
+
+
+
+
+            .form-box {
+               
+                .form-label {
+                    @include texts ($font-size-text);
+                    @include responsive-text;
+                }
+
+                .form-control {
+                    @include texts ($font-size-text);
+                    @include responsive-text;
+                   
+                }
+
+            }
+
+
+            .button-container {
+                @extend %flexbox;
+
+
+            }
+
+            .form-button {
+                @include texts ($font-size-text);
+                @include responsive-text;
+                border-radius: 5px;
+                background-color: $details-color;
+                width: 100px;
+                height: 40px;
+
+            }
+
+        }
     }
 
     .pulse-button {
@@ -63,7 +110,7 @@
             justify-content: flex-end;
             align-items: center;
 
-            
+
 
 
             .whatsapp-icon {
@@ -72,7 +119,7 @@
                 border-radius: 50%;
                 animation: pulse 2s infinite;
 
-            
+
 
                 @keyframes pulse {
                     0% {

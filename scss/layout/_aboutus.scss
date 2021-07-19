@@ -1,5 +1,6 @@
 @import "utilities/mixins";
 @import "utilities/variables";
+@import "utilities/breakpoints";
 
 /* Start About Us */
 
@@ -8,47 +9,83 @@
 
     .title-container {
         @extend %flexbox;
+        padding: 1rem 0 1rem 0;
 
         .title {
-            @include titles;
-            @extend %flexbox;
+            @include title ($font-size-title);
+            @include responsive-title;
+            border-bottom: 3px solid nth($color, 10);
         }
     }
 
-    .title-text {
-        @include subtitle-text;
+    .subtitle-container {
         @extend %flexbox;
-        text-align: justify;
 
+        .subtitle-text {
+            @include title ($font-size-subtitle);
+            @include responsive-subtitle;
+            padding: 1rem 0 1rem 0;
+
+        }
     }
 
-    .member {
-        position: relative;
-        text-align: center;
-
-        
-
-        .member-info {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            @include text;
-            @extend %flexbox;
-            transition: 0.2s;
-            visibility: hidden;
+    .member-section {
+        margin: 0;
+        @extend %flexbox;
 
 
+        .member-container {
+            padding: 1rem;
 
+
+            .member {
+                position: relative;
+
+                img{
+                    aspect-ratio: 1 / 1;
+                }
+
+
+                .member-info {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    @extend %flexbox;
+                    transition: 0.2s;
+                    visibility: hidden;
+                    text-align: center;
+
+
+                    .member-info-text {
+                        @include texts ($font-size-subtitle);
+                        @include responsive-text;
+                        @include responsive-member-info;
+                        margin: 0;
+                        padding: 0.3rem;
+                        font-style: italic;
+
+                    }
+
+                    .member-social {
+                        padding: 0.3rem;
+
+                        a img {
+                            @include responsive-member-social;
+                            width: 1rem;
+                            height: 1rem;
+                            aspect-ratio: 1 / 1;
+                        }
+                    }
+                }
+
+                &:hover .member-info {
+                    background: rgba(0, 0, 0, 0.7);
+                    visibility: initial;
+                }
+
+            }
         }
-
-        &:hover .member-info {
-            background: rgba(0, 0, 0, 0.7);
-            visibility: initial;
-        }
-
-
-
     }
 }

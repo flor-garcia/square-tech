@@ -3,6 +3,7 @@
 @import "utilities/lists";
 @import "utilities/breakpoints";
 
+
 * {
     padding: 0;
     margin: 0;
@@ -16,12 +17,25 @@
     border-bottom: 2px solid nth($color, 8);
 
     .container-fluid {
-        .navbar-brand .brand {
-            @include texts ($font-size-brand);
 
-            &:hover {
-                cursor: pointer;
-                color: $font-color;
+
+        .navbar-brand {
+            text-align: center;
+
+            img{
+                width: 30px;
+                aspect-ratio: 1 / 1;
+            }
+
+
+            .brand {
+                @include texts ($font-size-brand);
+                @include responsive-brand;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $font-color;
+                }
             }
         }
 
@@ -34,20 +48,26 @@
         }
 
         .navbar-collapse {
-            @extend %flexbox-end;
-            @include responsive-navbar-collapse;
-            
-            .nav-link {
-                @include texts ($font-size-subtitle);
-                @include responsive-text;
 
-                &:hover {
-                    color: $details-color;
+
+
+            .navbar-nav {
+
+
+
+                .nav-link {
+                    @include texts ($font-size-subtitle);
+
+
+                    &:hover {
+                        color: $details-color;
+                    }
                 }
             }
         }
     }
 }
+
 /* End NavBar */
 
 
@@ -55,9 +75,6 @@
 .banner-section {
     @extend %parallax;
 
-    .banner-img{
-    
-}
 
     .banner-text {
         position: absolute;

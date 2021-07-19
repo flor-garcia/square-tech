@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "css-aspect-ratio": "^1.0.5",
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.12"
   },

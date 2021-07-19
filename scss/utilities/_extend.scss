@@ -1,11 +1,6 @@
 @import "utilities/variables";
 @import "utilities/mixins";
 
-%icons{
-    width: 30px;
-    height: 24px;
-    margin: 0px 5px;
-}
 
 %flexbox{
     display: flex;
@@ -20,17 +15,6 @@
     align-items: center;
 }
 
-%service-card{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: $card-bg-color;
-    background-clip: border-box;
-    border: 1px solid 0 5px 15px 0px rgba(0,0,0,0.6);
-    border-radius: .50rem;
-}
 
 %parallax {
     background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");

@@ -4,38 +4,55 @@
 
 /* All Sections */
 @mixin responsive-text {
-    @media (max-width: 204px) {
+    @media (max-width: 220px) {
         font-size: nth($fontsize, 1);
+        text-align: center;
     }
 }
 
 @mixin responsive-subtitle {
-    @media (max-width: 204px) {
+    @media (max-width: 220px) {
         font-size: nth($fontsize, 1);
         text-align: center;
+        padding: 0.5rem 0 0.5rem 0;
         margin: 0;
     }
 }
 
 @mixin responsive-title {
-    @media (max-width: 780px) and (min-width:316px) {
-        font-size: nth($fontsize, 7);
+    @media (max-width: 780px) and (min-width:220px) {
+        font-size: nth($fontsize, 6);
+        padding:  0.5rem 0 0.5rem 0;
 
     }
 }
 
 @mixin responsive-title {
-    @media (max-width:316px) {
-        font-size: nth($fontsize, 4);
+    @media (max-width:220px){
+        font-size: nth($fontsize, 3);
     }
 }
 
 
 
 
+
+
 /* Header Section */
+@mixin responsive-brand{
+    @media (max-width: 220px) {
+        display: block;
+        font-size: nth($fontsize, 2);
+        font-weight:bold;
+        margin: 0;
+        padding:0;
+    }
+}
+
+
+
 @mixin responsive-navbar-collapse {
-    @media (max-width: 204px) {
+    @media (max-width: 220px) {
         display: flex;
         justify-content: flex-start !important;
     }
@@ -46,7 +63,7 @@
 
 /* Services Section */
 @mixin responsive-card-body {
-    @media (max-width: 204px) {
+    @media (max-width: 220px) {
         padding: 0.5rem;
         text-align: center;
     }
@@ -61,23 +78,27 @@
         flex-wrap: wrap;
     }
 }
-
-
-@mixin responsive-card-container {
-    @media (max-width: 576px) and (min-width:300px) {
-        padding-right: 6rem;
-        padding-left: 6rem;
-        margin: 0;
-    }
-}
-
-@mixin responsive-card-container {
-    @media (max-width: 300px) {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        margin: 0;
-
-    }
-
-}
 /* End Services Section */
+
+
+/* About us Section */
+@mixin responsive-member-info {
+    @media (max-width: 220px) {
+        padding: 0;
+    }
+}
+
+@mixin responsive-member-social {
+    @media (max-width: 220px) {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+}
+/* End About us Section */
+
+/* Contact Section */
+@mixin responsive-form-container {
+    @media (max-width: 575px) {
+        padding: 0.5rem;
+    }
+}
