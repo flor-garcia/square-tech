@@ -10,7 +10,7 @@
 
     .title-container {
         @extend %flexbox;
-        padding: 1rem 0 1rem 0;
+        padding: 1rem;
         margin: 0;
 
 
@@ -27,7 +27,7 @@
 
     .subtitle-container {
         @extend %flexbox;
-        padding: 0;
+        padding: 1rem;
 
         .subtitle-text {
             @include title ($font-size-subtitle);
@@ -38,14 +38,16 @@
 
     .mail-container {
         @extend %flexbox;
+        padding: 0.5rem;
+        overflow:scroll;
 
         .mail {
-
             @include title ($font-size-subtitle);
             @include responsive-subtitle;
-            padding: 1rem 0 1rem 0;
+            padding: 0.5rem;
             color: $details-color;
-            font-weight: 500;
+            
+
 
             :hover {
                 cursor: pointer;
@@ -54,96 +56,94 @@
         }
     }
 
-    .form {
-        padding: 2rem;
 
+    form {
+        padding: 1rem;
+        margin: 0;
 
         .form-container {
             background-color: $card-bg-color;
-            border-radius: 10px;
-            padding: 2rem;
+            border-radius: 0.7rem;
+            padding: 1rem;
             @include responsive-form-container;
-
-
-
+            
 
             .form-box {
-               
-                .form-label {
-                    @include texts ($font-size-text);
-                    @include responsive-text;
-                }
+                padding: 1rem;
+                @include responsive-form-container;
+                @include responsive-flexbox;
 
+                .form-label,
                 .form-control {
                     @include texts ($font-size-text);
                     @include responsive-text;
-                   
                 }
-
             }
 
-
             .button-container {
+                padding: 1rem 0 1rem 0;
                 @extend %flexbox;
 
 
-            }
-
-            .form-button {
-                @include texts ($font-size-text);
-                @include responsive-text;
-                border-radius: 5px;
-                background-color: $details-color;
-                width: 100px;
-                height: 40px;
-
-            }
-
-        }
-    }
-
-    .pulse-button {
-        padding: 1.5rem;
-
-        .whatsapp-button {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-
-
-
-
-            .whatsapp-icon {
-                width: 3.5rem;
-                height: 3.5rem;
-                border-radius: 50%;
-                animation: pulse 2s infinite;
-
-
-
-                @keyframes pulse {
-                    0% {
-                        transform: scale(0.9);
-
-                    }
-
-                    70% {
-                        transform: scale(2);
-
-                    }
-
-                    100% {
-                        transform: scale(0.9);
-                    }
+                button {
+                    background-color: $details-color;
+                    @include texts ($font-size-text);
+                    @include responsive-text;
+                    @include responsive-form-button;
+                    border: none;
+                    border-radius: 1rem;
+                    width: 5rem;
+                    height: 3rem;
 
 
                 }
             }
+
+
         }
     }
-
-
 }
+
+.pulse-button {
+    padding: 1.5rem;
+    @include responsive-flexbox;
+
+    .whatsapp-button {
+       @extend %flexbox-end;
+       
+
+        .whatsapp-icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            @include responsive-pulse-button;
+            border-radius: 50%;
+            animation: pulse 4s infinite;
+
+
+
+            @keyframes pulse {
+                0% {
+                    transform: scale(0.9);
+
+                }
+
+                70% {
+                    transform: scale(1);
+
+                }
+
+                100% {
+                    transform: scale(0.9);
+                }
+
+
+            }
+        }
+    }
+}
+
+
+
 
 
 

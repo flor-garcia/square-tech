@@ -11,7 +11,7 @@
 
     .title-container {
         @extend %flexbox;
-        padding: 1rem 0 1rem 0;
+        padding: 1rem;
     }
 
     .title {
@@ -36,9 +36,10 @@
            
             .card {
                 background-color: $card-bg-color;
+                width: 100%;
 
                 img{
-                    width: fit-content;
+                    width: 100%;
                     aspect-ratio: 1 / 1;
                 }
                 

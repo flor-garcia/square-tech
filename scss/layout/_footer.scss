@@ -9,32 +9,15 @@ footer {
     @extend %parallax;
 
 
-        .sticky-button {
-            
-            display: block;
-            position: fixed;
-            bottom: 7.5rem;
-            right: 3.75rem;
-
-            .sticky-icon {
-            width: 3.75rem;
-            height: 3.75rem;
-
-            }
-        }
-
-
     .copyright {
-        font-family: "GilroyLight";
-        font-size: nth($fontsize, 2);
-        color: lighten(nth($color, 3), 20%);
-        padding: 20px 10px;
-        border-top: 1px solid lighten(nth($color, 2), 20%);
-        @include responsive-copyright;
-        margin: 0;
+        padding: 2.5rem;
+        @extend %flexbox;
 
         .copyright-text {
-            @extend %flexbox;
+            @include texts ($font-size-text);
+            @include responsive-text;
+            text-align: center;
+            margin: 0;
         }
 
     

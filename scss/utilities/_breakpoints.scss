@@ -33,6 +33,15 @@
     }
 }
 
+@mixin responsive-flexbox {
+    @media (max-width: 575px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
 
 
 
@@ -102,3 +111,22 @@
         padding: 0.5rem;
     }
 }
+
+@mixin responsive-form-button {
+    @media (max-width: 575px) {
+        width: 4rem;
+        height: 2rem;
+    }
+}
+
+@mixin responsive-pulse-button {
+    @media (max-width: 575px) {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+
+
+
+    

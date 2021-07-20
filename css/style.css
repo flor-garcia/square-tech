@@ -49,11 +49,16 @@
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact .form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
+
+.pulse-button .whatsapp-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
 
 .banner-section, footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
@@ -208,11 +213,16 @@
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact .form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
+
+.pulse-button .whatsapp-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
 
 .banner-section, footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
@@ -230,27 +240,20 @@
   font-display: swap; }
 
 /* Start Footer */
-footer .sticky-button {
-  display: block;
-  position: fixed;
-  bottom: 7.5rem;
-  right: 3.75rem; }
-  footer .sticky-button .sticky-icon {
-    width: 3.75rem;
-    height: 3.75rem; }
-
 footer .copyright {
-  font-family: "GilroyLight";
-  font-size: 0.8rem;
-  color: white;
-  padding: 20px 10px;
-  border-top: 1px solid #686677;
-  margin: 0; }
-  @media (max-width: 768px) {
-    footer .copyright {
-      display: flex;
-      text-align: center;
-      align-items: center; } }
+  padding: 2.5rem; }
+  footer .copyright .copyright-text {
+    font-family: "GilroyLight";
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    text-justify: auto;
+    text-align: center;
+    margin: 0; }
+    @media (max-width: 220px) {
+      footer .copyright .copyright-text {
+        font-size: 0.5rem;
+        text-align: center; } }
 
 /* End Footer */
 @font-face {
@@ -273,11 +276,16 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact .form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
+
+.pulse-button .whatsapp-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
 
 .banner-section, footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
@@ -324,11 +332,16 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact .form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
+
+.pulse-button .whatsapp-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
 
 .banner-section, footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
@@ -357,7 +370,7 @@ footer .copyright {
 #services {
   background-color: #0F1026; }
   #services .title-container {
-    padding: 1rem 0 1rem 0; }
+    padding: 1rem; }
   #services .title {
     font-family: "GilroyExtraBold";
     font-size: 3rem;
@@ -380,9 +393,10 @@ footer .copyright {
     #services .card-section .card-container {
       padding: 1rem; }
       #services .card-section .card-container .card {
-        background-color: #2D2E40; }
+        background-color: #2D2E40;
+        width: 100%; }
         #services .card-section .card-container .card img {
-          width: fit-content;
+          width: 100%;
           aspect-ratio: 1 / 1; }
         @media (max-width: 220px) {
           #services .card-section .card-container .card .card-body {
@@ -436,11 +450,16 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact .form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
+
+.pulse-button .whatsapp-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
 
 .banner-section, footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
@@ -487,11 +506,16 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact .form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
+
+.pulse-button .whatsapp-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
 
 .banner-section, footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
@@ -520,7 +544,7 @@ footer .copyright {
 #contact {
   background-color: #0F1026; }
   #contact .title-container {
-    padding: 1rem 0 1rem 0;
+    padding: 1rem;
     margin: 0; }
     #contact .title-container .title {
       font-family: "GilroyExtraBold";
@@ -535,7 +559,7 @@ footer .copyright {
         #contact .title-container .title {
           font-size: 1rem; } }
   #contact .subtitle-container {
-    padding: 0; }
+    padding: 1rem; }
     #contact .subtitle-container .subtitle-text {
       font-family: "GilroyExtraBold";
       font-size: 1.2rem;
@@ -550,84 +574,104 @@ footer .copyright {
           text-align: center;
           padding: 0.5rem 0 0.5rem 0;
           margin: 0; } }
-  #contact .mail-container .mail {
-    font-family: "GilroyExtraBold";
-    font-size: 1.2rem;
-    color: white;
-    text-decoration: none;
-    width: fit-content;
-    text-align: center;
-    padding: 1rem 0 1rem 0;
-    color: #f22e2e;
-    font-weight: 500; }
-    @media (max-width: 220px) {
-      #contact .mail-container .mail {
-        font-size: 0.5rem;
-        text-align: center;
-        padding: 0.5rem 0 0.5rem 0;
-        margin: 0; } }
-    #contact .mail-container .mail :hover {
-      cursor: pointer; }
-  #contact .form {
-    padding: 2rem; }
-    #contact .form .form-container {
+  #contact .mail-container {
+    padding: 0.5rem;
+    overflow: scroll; }
+    #contact .mail-container .mail {
+      font-family: "GilroyExtraBold";
+      font-size: 1.2rem;
+      color: white;
+      text-decoration: none;
+      width: fit-content;
+      text-align: center;
+      padding: 0.5rem;
+      color: #f22e2e; }
+      @media (max-width: 220px) {
+        #contact .mail-container .mail {
+          font-size: 0.5rem;
+          text-align: center;
+          padding: 0.5rem 0 0.5rem 0;
+          margin: 0; } }
+      #contact .mail-container .mail :hover {
+        cursor: pointer; }
+  #contact form {
+    padding: 1rem;
+    margin: 0; }
+    #contact form .form-container {
       background-color: #2D2E40;
-      border-radius: 10px;
-      padding: 2rem; }
+      border-radius: 0.7rem;
+      padding: 1rem; }
       @media (max-width: 575px) {
-        #contact .form .form-container {
+        #contact form .form-container {
           padding: 0.5rem; } }
-      #contact .form .form-container .form-box .form-label {
-        font-family: "GilroyLight";
-        font-size: 1rem;
-        color: white;
-        text-decoration: none;
-        text-justify: auto; }
-        @media (max-width: 220px) {
-          #contact .form .form-container .form-box .form-label {
-            font-size: 0.5rem;
-            text-align: center; } }
-      #contact .form .form-container .form-box .form-control {
-        font-family: "GilroyLight";
-        font-size: 1rem;
-        color: white;
-        text-decoration: none;
-        text-justify: auto; }
-        @media (max-width: 220px) {
-          #contact .form .form-container .form-box .form-control {
-            font-size: 0.5rem;
-            text-align: center; } }
-      #contact .form .form-container .form-button {
-        font-family: "GilroyLight";
-        font-size: 1rem;
-        color: white;
-        text-decoration: none;
-        text-justify: auto;
-        border-radius: 5px;
-        background-color: #f22e2e;
-        width: 100px;
-        height: 40px; }
-        @media (max-width: 220px) {
-          #contact .form .form-container .form-button {
-            font-size: 0.5rem;
-            text-align: center; } }
-  #contact .pulse-button {
-    padding: 1.5rem; }
-    #contact .pulse-button .whatsapp-button {
+      #contact form .form-container .form-box {
+        padding: 1rem; }
+        @media (max-width: 575px) {
+          #contact form .form-container .form-box {
+            padding: 0.5rem; } }
+        @media (max-width: 575px) {
+          #contact form .form-container .form-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap; } }
+        #contact form .form-container .form-box .form-label,
+        #contact form .form-container .form-box .form-control {
+          font-family: "GilroyLight";
+          font-size: 1rem;
+          color: white;
+          text-decoration: none;
+          text-justify: auto; }
+          @media (max-width: 220px) {
+            #contact form .form-container .form-box .form-label,
+            #contact form .form-container .form-box .form-control {
+              font-size: 0.5rem;
+              text-align: center; } }
+      #contact form .form-container .button-container {
+        padding: 1rem 0 1rem 0; }
+        #contact form .form-container .button-container button {
+          background-color: #f22e2e;
+          font-family: "GilroyLight";
+          font-size: 1rem;
+          color: white;
+          text-decoration: none;
+          text-justify: auto;
+          border: none;
+          border-radius: 1rem;
+          width: 5rem;
+          height: 3rem; }
+          @media (max-width: 220px) {
+            #contact form .form-container .button-container button {
+              font-size: 0.5rem;
+              text-align: center; } }
+          @media (max-width: 575px) {
+            #contact form .form-container .button-container button {
+              width: 4rem;
+              height: 2rem; } }
+
+.pulse-button {
+  padding: 1.5rem; }
+  @media (max-width: 575px) {
+    .pulse-button {
       display: flex;
-      justify-content: flex-end;
-      align-items: center; }
-      #contact .pulse-button .whatsapp-button .whatsapp-icon {
-        width: 3.5rem;
-        height: 3.5rem;
-        border-radius: 50%;
-        animation: pulse 2s infinite; }
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; } }
+  .pulse-button .whatsapp-button .whatsapp-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    animation: pulse 4s infinite; }
+    @media (max-width: 575px) {
+      .pulse-button .whatsapp-button .whatsapp-icon {
+        width: 2.5rem;
+        height: 2.5rem; } }
 
 @keyframes pulse {
   0% {
     transform: scale(0.9); }
   70% {
-    transform: scale(2); }
+    transform: scale(1); }
   100% {
     transform: scale(0.9); } }
 
@@ -682,11 +726,16 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact .form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
+
+.pulse-button .whatsapp-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
 
 .banner-section, footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
@@ -703,7 +752,7 @@ footer .copyright {
 /* Contact Section */
 /* Start About Us */
 #aboutus .title-container {
-  padding: 1rem 0 1rem 0; }
+  padding: 1rem; }
   #aboutus .title-container .title {
     font-family: "GilroyExtraBold";
     font-size: 3rem;
@@ -818,11 +867,16 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright .copyright-text, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact .form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
+
+.pulse-button .whatsapp-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
 
 .banner-section, footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
