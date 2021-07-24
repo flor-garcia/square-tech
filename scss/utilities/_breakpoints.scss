@@ -15,20 +15,20 @@
         font-size: nth($fontsize, 1);
         text-align: center;
         padding: 0.5rem 0 0.5rem 0;
-        margin: 0;
     }
 }
 
 @mixin responsive-title {
     @media (max-width: 780px) and (min-width:220px) {
-        font-size: nth($fontsize, 6);
-        padding:  0.5rem 0 0.5rem 0;
+        font-size: nth($fontsize, 4);
+        margin: 0;
+        
 
     }
 }
 
 @mixin responsive-title {
-    @media (max-width:220px){
+    @media (max-width:220px) {
         font-size: nth($fontsize, 3);
     }
 }
@@ -45,16 +45,14 @@
 
 
 
-
-
 /* Header Section */
-@mixin responsive-brand{
+@mixin responsive-brand {
     @media (max-width: 220px) {
         display: block;
         font-size: nth($fontsize, 2);
-        font-weight:bold;
+        font-weight: bold;
         margin: 0;
-        padding:0;
+        padding: 0;
     }
 }
 
@@ -66,6 +64,25 @@
         justify-content: flex-start !important;
     }
 }
+
+
+@mixin responsive-banner-section {
+    @media (max-width:330px) {
+        height: 25rem;
+        padding: 0;
+    }
+
+}
+
+@mixin responsive-typing-container {
+    @media (max-width:330px) {
+        padding: 0;
+    }
+
+}
+
+
+
 /* End Header Section */
 
 
@@ -87,6 +104,7 @@
         flex-wrap: wrap;
     }
 }
+
 /* End Services Section */
 
 
@@ -103,6 +121,7 @@
         height: 0.5rem;
     }
 }
+
 /* End About us Section */
 
 /* Contact Section */
@@ -125,8 +144,3 @@
         height: 2.5rem;
     }
 }
-
-
-
-
-    

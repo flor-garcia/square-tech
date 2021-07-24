@@ -12,6 +12,7 @@
     .title-container {
         @extend %flexbox;
         padding: 1rem;
+        margin: 0;
     }
 
     .title {
@@ -38,9 +39,10 @@
                 background-color: $card-bg-color;
                 width: 100%;
 
+
                 img{
                     width: 100%;
-                    aspect-ratio: 1 / 1;
+                    height:auto;
                 }
                 
                 .card-body {
@@ -48,6 +50,7 @@
                     .card-title {
                         @include title ($font-size-brand);
                         @include responsive-subtitle;
+                        margin: auto;
 
                         &:hover {
                             border-bottom: 2px solid $details-color;
@@ -59,6 +62,7 @@
                         @include responsive-text;
                         @extend %flexbox;
                         padding-top: 1rem;
+                        margin: auto;
                     }
                 }
             }

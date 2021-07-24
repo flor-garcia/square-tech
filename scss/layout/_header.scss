@@ -22,7 +22,7 @@
         .navbar-brand {
             text-align: center;
 
-            img{
+            img {
                 width: 30px;
                 aspect-ratio: 1 / 1;
             }
@@ -73,104 +73,131 @@
 
 /* Start Banner */
 .banner-section {
-    @extend %parallax;
+    background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
+    background-size: cover;
+    object-fit: cover;
+    height: 60rem;
+    @extend %flexbox;
+    @include responsive-banner-section;
 
 
-    .banner-text {
-        position: absolute;
-        display: inline-block;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        @extend %flexbox;
-        z-index: 1;
+    .typing-container {
+        width: auto;
+        padding: 1rem;
+        overflow: auto;
+        @include responsive-typing-container;
 
 
-        .typewriter {
+        h1,
+        h2,
+        h3 {
+            width: fit-content;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0;
+            padding-left: 1rem;
+            width: auto;
+            @include banner-text;
+            @include responsive-typing-container;
 
 
-            .typing-text {
-                @include banner-text;
-                @include responsive-text-banner;
-                overflow: hidden;
-                flex-wrap: wrap;
-                border-right: .15rem solid $details-color;
-                margin: 0 auto;
-                padding-right: 2rem;
-                letter-spacing: 0.1rem;
-            }
 
             &:nth-child(1) {
-                animation: typing 3.5s steps(50, end), blink-caret .75s step-end infinite alternate;
+                border-right: 0.2rem solid white;
+                color: white;
+                width: 11.5em;
+                animation: type 2s steps(19, end);
                 animation-fill-mode: forwards;
+
             }
+
 
             &:nth-child(2) {
-                animation: typing-2 3.5s steps(30, end), blink-caret .75s step-end infinite alternate;
-                animation-fill-mode: forwards;
+                border-right: 0.2rem solid white;
+                color: white;
+                width: 8.5em;
                 opacity: 0;
+                animation: type2 2s steps(16, end);
+                animation-delay: 2s;
+                animation-fill-mode: forwards
             }
 
-            .selection {
+            &:nth-child(3) {
+                border-right: 0.2rem solid $details-color;
                 color: $details-color;
-            }
-
-            @keyframes typing {
-                0% {
-                    width: 0
-                }
-
-                99.9% {
-                    border-right: .15rem solid $details-color;
-                }
-
-                100% {
-                    border: none
-                }
-
+                width: 5.5em;
+                opacity: 0;
+                animation: type3 2s steps(13, end), blink .5s step-end infinite alternate;
+                animation-delay: 4s;
+                animation-fill-mode: forwards;
 
             }
-
-            @keyframes typing-2 {
-                0% {
-                    width: 0
-                }
-
-                1% {
-                    opacity: 1;
-                }
-
-                99.9% {
-                    border-right: .15rem solid $details-color;
-                }
-
-                100% {
-                    border: none;
-                    opacity: 1;
-
-                }
-
-
-            }
-
-
-            @keyframes blink-caret {
-
-                from,
-                to {
-                    border-color: transparent
-                }
-
-                50% {
-                    border-color: $details-color
-                }
-
-            }
-
 
         }
+
     }
+
+
+
+    @keyframes type {
+        0% {
+            width: 0;
+        }
+
+        99.9% {
+            border-right: 0.2rem solid white;
+        }
+
+        100% {
+            border: none;
+        }
+    }
+
+
+    @keyframes type2 {
+        0% {
+            width: 0;
+        }
+
+        1% {
+            opacity: 1;
+        }
+
+        99.9% {
+            border-right: 0.2rem solid white;
+        }
+
+        100% {
+            opacity: 1;
+            border: none;
+        }
+    }
+
+
+    @keyframes type3 {
+        0% {
+            width: 0;
+        }
+
+        1% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+
+
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+
 }
+
 
 /* End Banner */

@@ -49,18 +49,18 @@
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
 
-.pulse-button .whatsapp-button {
+#contact .pulse-button .whatsapp-button {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
 
-.banner-section, footer, #aboutus {
+footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
   background-attachment: fixed;
   background-size: cover; }
@@ -118,69 +118,98 @@
 
 /* End NavBar */
 /* Start Banner */
-.banner-section .banner-text {
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 1; }
-  .banner-section .banner-text .typewriter .typing-text {
-    font-family: "GilroyExtraBold";
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    overflow: hidden;
-    flex-wrap: wrap;
-    border-right: 0.15rem solid #f22e2e;
-    margin: 0 auto;
-    padding-right: 2rem;
-    letter-spacing: 0.1rem; }
-    @media (max-width: 830px) {
-      .banner-section .banner-text .typewriter .typing-text {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        font-size: 1rem;
-        margin: 0 auto;
-        padding-left: 2rem; } }
-  .banner-section .banner-text .typewriter:nth-child(1) {
-    animation: typing 3.5s steps(50, end), blink-caret 0.75s step-end infinite alternate;
-    animation-fill-mode: forwards; }
-  .banner-section .banner-text .typewriter:nth-child(2) {
-    animation: typing-2 3.5s steps(30, end), blink-caret 0.75s step-end infinite alternate;
-    animation-fill-mode: forwards;
-    opacity: 0; }
-  .banner-section .banner-text .typewriter .selection {
-    color: #f22e2e; }
+.banner-section {
+  background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
+  background-size: cover;
+  object-fit: cover;
+  height: 60rem; }
+  @media (max-width: 330px) {
+    .banner-section {
+      height: 25rem;
+      padding: 0; } }
+  .banner-section .typing-container {
+    width: auto;
+    padding: 1rem;
+    overflow: auto; }
+    @media (max-width: 330px) {
+      .banner-section .typing-container {
+        padding: 0; } }
+    .banner-section .typing-container h1,
+    .banner-section .typing-container h2,
+    .banner-section .typing-container h3 {
+      width: fit-content;
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 0;
+      padding-left: 1rem;
+      width: auto;
+      font-family: "GilroyExtraBold";
+      font-size: 7vw;
+      text-decoration: none; }
+      @media (max-width: 330px) {
+        .banner-section .typing-container h1,
+        .banner-section .typing-container h2,
+        .banner-section .typing-container h3 {
+          padding: 0; } }
+      .banner-section .typing-container h1:nth-child(1),
+      .banner-section .typing-container h2:nth-child(1),
+      .banner-section .typing-container h3:nth-child(1) {
+        border-right: 0.2rem solid white;
+        color: white;
+        width: 11.5em;
+        animation: type 2s steps(19, end);
+        animation-fill-mode: forwards; }
+      .banner-section .typing-container h1:nth-child(2),
+      .banner-section .typing-container h2:nth-child(2),
+      .banner-section .typing-container h3:nth-child(2) {
+        border-right: 0.2rem solid white;
+        color: white;
+        width: 8.5em;
+        opacity: 0;
+        animation: type2 2s steps(16, end);
+        animation-delay: 2s;
+        animation-fill-mode: forwards; }
+      .banner-section .typing-container h1:nth-child(3),
+      .banner-section .typing-container h2:nth-child(3),
+      .banner-section .typing-container h3:nth-child(3) {
+        border-right: 0.2rem solid #f22e2e;
+        color: #f22e2e;
+        width: 5.5em;
+        opacity: 0;
+        animation: type3 2s steps(13, end), blink 0.5s step-end infinite alternate;
+        animation-delay: 4s;
+        animation-fill-mode: forwards; }
 
-@keyframes typing {
+@keyframes type {
   0% {
     width: 0; }
   99.9% {
-    border-right: 0.15rem solid #f22e2e; }
+    border-right: 0.2rem solid white; }
   100% {
     border: none; } }
 
-@keyframes typing-2 {
+@keyframes type2 {
   0% {
     width: 0; }
   1% {
     opacity: 1; }
   99.9% {
-    border-right: 0.15rem solid #f22e2e; }
+    border-right: 0.2rem solid white; }
   100% {
-    border: none;
+    opacity: 1;
+    border: none; } }
+
+@keyframes type3 {
+  0% {
+    width: 0; }
+  1% {
+    opacity: 1; }
+  100% {
     opacity: 1; } }
 
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent; }
+@keyframes blink {
   50% {
-    border-color: #f22e2e; } }
+    border-color: transparent; } }
 
 /* End Banner */
 @font-face {
@@ -213,18 +242,18 @@
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
 
-.pulse-button .whatsapp-button {
+#contact .pulse-button .whatsapp-button {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
 
-.banner-section, footer, #aboutus {
+footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
   background-attachment: fixed;
   background-size: cover; }
@@ -276,18 +305,18 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
 
-.pulse-button .whatsapp-button {
+#contact .pulse-button .whatsapp-button {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
 
-.banner-section, footer, #aboutus {
+footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
   background-attachment: fixed;
   background-size: cover; }
@@ -332,18 +361,18 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
 
-.pulse-button .whatsapp-button {
+#contact .pulse-button .whatsapp-button {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
 
-.banner-section, footer, #aboutus {
+footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
   background-attachment: fixed;
   background-size: cover; }
@@ -370,7 +399,8 @@ footer .copyright {
 #services {
   background-color: #0F1026; }
   #services .title-container {
-    padding: 1rem; }
+    padding: 1rem;
+    margin: 0; }
   #services .title {
     font-family: "GilroyExtraBold";
     font-size: 3rem;
@@ -397,7 +427,7 @@ footer .copyright {
         width: 100%; }
         #services .card-section .card-container .card img {
           width: 100%;
-          aspect-ratio: 1 / 1; }
+          height: auto; }
         @media (max-width: 220px) {
           #services .card-section .card-container .card .card-body {
             padding: 0.5rem;
@@ -408,13 +438,13 @@ footer .copyright {
           color: white;
           text-decoration: none;
           width: fit-content;
-          text-align: center; }
+          text-align: center;
+          margin: auto; }
           @media (max-width: 220px) {
             #services .card-section .card-container .card .card-body .card-title {
               font-size: 0.5rem;
               text-align: center;
-              padding: 0.5rem 0 0.5rem 0;
-              margin: 0; } }
+              padding: 0.5rem 0 0.5rem 0; } }
           #services .card-section .card-container .card .card-body .card-title:hover {
             border-bottom: 2px solid #f22e2e; }
         #services .card-section .card-container .card .card-body .card-text {
@@ -423,7 +453,8 @@ footer .copyright {
           color: white;
           text-decoration: none;
           text-justify: auto;
-          padding-top: 1rem; }
+          padding-top: 1rem;
+          margin: auto; }
           @media (max-width: 220px) {
             #services .card-section .card-container .card .card-body .card-text {
               font-size: 0.5rem;
@@ -450,18 +481,18 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
 
-.pulse-button .whatsapp-button {
+#contact .pulse-button .whatsapp-button {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
 
-.banner-section, footer, #aboutus {
+footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
   background-attachment: fixed;
   background-size: cover; }
@@ -506,18 +537,18 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
 
-.pulse-button .whatsapp-button {
+#contact .pulse-button .whatsapp-button {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
 
-.banner-section, footer, #aboutus {
+footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
   background-attachment: fixed;
   background-size: cover; }
@@ -572,8 +603,7 @@ footer .copyright {
         #contact .subtitle-container .subtitle-text {
           font-size: 0.5rem;
           text-align: center;
-          padding: 0.5rem 0 0.5rem 0;
-          margin: 0; } }
+          padding: 0.5rem 0 0.5rem 0; } }
   #contact .mail-container {
     padding: 0.5rem;
     overflow: scroll; }
@@ -590,8 +620,7 @@ footer .copyright {
         #contact .mail-container .mail {
           font-size: 0.5rem;
           text-align: center;
-          padding: 0.5rem 0 0.5rem 0;
-          margin: 0; } }
+          padding: 0.5rem 0 0.5rem 0; } }
       #contact .mail-container .mail :hover {
         cursor: pointer; }
   #contact form {
@@ -636,10 +665,11 @@ footer .copyright {
           color: white;
           text-decoration: none;
           text-justify: auto;
-          border: none;
+          border: 1px solid #f22e2e;
           border-radius: 1rem;
           width: 5rem;
-          height: 3rem; }
+          height: 3rem;
+          box-shadow: -2px -2px 15px -2px rgba(0, 0, 0, 0.75); }
           @media (max-width: 220px) {
             #contact form .form-container .button-container button {
               font-size: 0.5rem;
@@ -648,24 +678,23 @@ footer .copyright {
             #contact form .form-container .button-container button {
               width: 4rem;
               height: 2rem; } }
-
-.pulse-button {
-  padding: 1.5rem; }
-  @media (max-width: 575px) {
-    .pulse-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap; } }
-  .pulse-button .whatsapp-button .whatsapp-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    animation: pulse 4s infinite; }
+  #contact .pulse-button {
+    padding: 1.5rem; }
     @media (max-width: 575px) {
-      .pulse-button .whatsapp-button .whatsapp-icon {
-        width: 2.5rem;
-        height: 2.5rem; } }
+      #contact .pulse-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; } }
+    #contact .pulse-button .whatsapp-button .whatsapp-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      animation: pulse 4s infinite; }
+      @media (max-width: 575px) {
+        #contact .pulse-button .whatsapp-button .whatsapp-icon {
+          width: 2.5rem;
+          height: 2.5rem; } }
 
 @keyframes pulse {
   0% {
@@ -726,18 +755,18 @@ footer .copyright {
   src: url("../fonts/Gilroy-Light.otf") format("opentype");
   font-display: swap; }
 
-.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
+.banner-section, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
 
-.pulse-button .whatsapp-button {
+#contact .pulse-button .whatsapp-button {
   display: flex;
   justify-content: flex-end;
   align-items: center; }
 
-.banner-section, footer, #aboutus {
+footer, #aboutus {
   background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
   background-attachment: fixed;
   background-size: cover; }
@@ -777,8 +806,7 @@ footer .copyright {
     #aboutus .subtitle-container .subtitle-text {
       font-size: 0.5rem;
       text-align: center;
-      padding: 0.5rem 0 0.5rem 0;
-      margin: 0; } }
+      padding: 0.5rem 0 0.5rem 0; } }
 
 #aboutus .member-section {
   margin: 0; }
@@ -826,86 +854,3 @@ footer .copyright {
       #aboutus .member-section .member-container .member:hover .member-info {
         background: rgba(0, 0, 0, 0.7);
         visibility: initial; }
-
-@font-face {
-  font-family: "GilroyExtraBold";
-  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
-  font-display: swap; }
-
-@font-face {
-  font-family: "GilroyLight";
-  src: url("../fonts/Gilroy-Light.otf") format("opentype");
-  font-display: swap; }
-
-@font-face {
-  font-family: "GilroyExtraBold";
-  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
-  font-display: swap; }
-
-@font-face {
-  font-family: "GilroyLight";
-  src: url("../fonts/Gilroy-Light.otf") format("opentype");
-  font-display: swap; }
-
-@font-face {
-  font-family: "GilroyExtraBold";
-  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
-  font-display: swap; }
-
-@font-face {
-  font-family: "GilroyLight";
-  src: url("../fonts/Gilroy-Light.otf") format("opentype");
-  font-display: swap; }
-
-@font-face {
-  font-family: "GilroyExtraBold";
-  src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
-  font-display: swap; }
-
-@font-face {
-  font-family: "GilroyLight";
-  src: url("../fonts/Gilroy-Light.otf") format("opentype");
-  font-display: swap; }
-
-.banner-section .banner-text, footer .copyright, #services .title-container, #services .title, #services .card-section .card-container .card .card-body .card-text, #contact .title-container, #contact .title-container .title, #contact .subtitle-container, #contact .mail-container, #contact form .form-container .button-container, #aboutus .title-container, #aboutus .subtitle-container, #aboutus .member-section, #aboutus .member-section .member-container .member .member-info, #body .image-container .error-image, #body .image-container .error-text, #body .image-container .error-button-container, #body .image-container .error-button-container .error-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; }
-
-.pulse-button .whatsapp-button {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; }
-
-.banner-section, footer, #aboutus {
-  background-image: url("https://i.ibb.co/pb8LGXg/5570215.jpg");
-  background-attachment: fixed;
-  background-size: cover; }
-
-#body {
-  background-color: #0F1026 !important; }
-  #body .image-container {
-    background-color: #0F1026; }
-    #body .image-container .error-image {
-      height: 500px;
-      width: 500px;
-      margin: auto; }
-    #body .image-container .error-text {
-      font-family: "GilroyExtraBold";
-      font-size: 2.5rem;
-      color: white;
-      text-decoration: none;
-      padding: 1.25rem 0.62rem;
-      width: fit-content;
-      text-align: center;
-      border-bottom: 5px solid #f22e2e; }
-    #body .image-container .error-button-container .error-button {
-      font-family: "GilroyLight";
-      font-size: 1rem;
-      color: white;
-      text-decoration: none;
-      background-color: #f22e2e;
-      border-radius: 10px;
-      width: 200px;
-      height: 40px; }
