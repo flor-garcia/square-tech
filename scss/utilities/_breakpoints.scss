@@ -58,12 +58,6 @@
 
 
 
-@mixin responsive-navbar-collapse {
-    @media (max-width: 220px) {
-        display: flex;
-        justify-content: flex-start !important;
-    }
-}
 
 
 @mixin responsive-banner-section {

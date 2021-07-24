@@ -85,8 +85,7 @@ footer, #aboutus {
   .navbar .container-fluid .navbar-brand {
     text-align: center; }
     .navbar .container-fluid .navbar-brand img {
-      width: 30px;
-      aspect-ratio: 1 / 1; }
+      width: 30px; }
     .navbar .container-fluid .navbar-brand .brand {
       font-family: "GilroyLight";
       font-size: 1.5rem;
@@ -104,17 +103,24 @@ footer, #aboutus {
         cursor: pointer;
         color: white; }
   .navbar .container-fluid .navbar-toggler {
-    background-color: #0F1026; }
+    background-color: #0F1026;
+    padding: 0.5rem; }
     .navbar .container-fluid .navbar-toggler .navbar-toggler-icon {
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28242, 46, 46%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
-  .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
-    font-family: "GilroyLight";
-    font-size: 1.2rem;
-    color: white;
-    text-decoration: none;
-    text-justify: auto; }
-    .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link:hover {
-      color: #f22e2e; }
+  .navbar .container-fluid .navbar-collapse .navbar-nav {
+    align-items: flex-start; }
+    .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
+      font-family: "GilroyLight";
+      font-size: 1.2rem;
+      color: white;
+      text-decoration: none;
+      text-justify: auto; }
+      @media (max-width: 220px) {
+        .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link {
+          font-size: 0.5rem;
+          text-align: center; } }
+      .navbar .container-fluid .navbar-collapse .navbar-nav .nav-link:hover {
+        color: #f22e2e; }
 
 /* End NavBar */
 /* Start Banner */
@@ -815,7 +821,8 @@ footer, #aboutus {
     #aboutus .member-section .member-container .member {
       position: relative; }
       #aboutus .member-section .member-container .member img {
-        aspect-ratio: 1 / 1; }
+        width: 100%;
+        height: auto; }
       #aboutus .member-section .member-container .member .member-info {
         position: absolute;
         top: 0;
@@ -845,8 +852,7 @@ footer, #aboutus {
           padding: 0.3rem; }
           #aboutus .member-section .member-container .member .member-info .member-social a img {
             width: 1rem;
-            height: 1rem;
-            aspect-ratio: 1 / 1; }
+            height: 1rem; }
             @media (max-width: 220px) {
               #aboutus .member-section .member-container .member .member-info .member-social a img {
                 width: 0.5rem;
